@@ -13,10 +13,10 @@ script="echo 'printing $file'; pr $file | lp; rm $file"
 #check if file exists or not
 if [ -a $file ]; then
     #copies text file to the pc with printer
-    scp $file aditya@192.168.0.106:
+    scp $file <user-name>@<ip>:
 
     #connects to the remote pc and executes the command
-    ssh aditya@192.168.0.106 "${script}"
+    ssh <user-name>@<ip> "${script}"
     exit
 else
     echo "file doesn't exist"
