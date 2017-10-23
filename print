@@ -1,0 +1,24 @@
+#!/bin/bash
+
+#this script is meant to print a text  document
+
+echo "enter file name"
+#reads name of text file
+read file
+
+#the script to be executed to print the file
+#it displays the file name, executes the print command and removes the file from the remote pc
+script="echo 'printing $file'; pr $file | lp; rm $file"
+
+#check if file exists or not
+if [ -a $file ]; then
+    #copies text file to the pc with printer
+    scp $file aditya@192.168.0.106:
+
+    #connects to the remote pc and executes the command
+    ssh aditya@192.168.0.106 "${script}"
+    exit
+else
+    echo "file doesn't exist"
+    exit
+fi
