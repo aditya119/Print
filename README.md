@@ -9,8 +9,8 @@ After downlaoading the script,
   - cd ~; mkdir bin
   - mv print bin
   - Run the command "echo $PATH", you should find /home/<your-username>/bin as on of the path in this; if it is not already, then paste the following command in the ".bashrc" file in your "/home" direcotry
-  \nexport PATH=~/bin:"$PATH"
+  - export PATH=~/bin:"$PATH"
   - And re-read the ".bashrc" file to make the changes available using the command:
   - . .bashrc
-\nAfter following the above mentioned steps, you can access the print file from anywhere, and it would work like any other command.
-\nTo print a file: open the Terminal, traverse to the directory containing the file, and run the print command using "print" and follow the steps as required.
+- After following the above mentioned steps, you can access the print file from anywhere, and it would work like any other command.
+- To print a file: open the Terminal, traverse to the directory containing the file, and run the print command using "print" and follow the steps as required.
